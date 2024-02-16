@@ -8,5 +8,5 @@ fact(0,1)
 fact(N,Result) :-
     N>0,
     H=N-1,
-    factorial(H,R),
+    fact(H,R),
     Result=N*R.
