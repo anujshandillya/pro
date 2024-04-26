@@ -1,10 +1,7 @@
-Domains
-    Y=integer*
+delete(_,[],[]).
 
-Predicates
-    delete(integer,Y,Y)
+delete(Y,[Y|T],B):- 
+    delete(Y,T,B).
 
-Clauses
-    delete(_,[],[]).
-    delete(Y,[Y|T],B).
-    delete(Y,[H|T],[H|T2]):-Y<>H,delete(Y,T,T2).
+delete(Y,[H|T],[H|T2]):- 
+    delete(Y,T,T2).
